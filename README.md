@@ -1,5 +1,8 @@
 # check_tomcat
-Nagios monitoring compatible Tomcat server health check
+Nagios monitoring compatible Tomcat server health check.
+
+Monitoring server process alone may not reveal underlying Tomcat failure.
+Script reads the last line in Tomcat server log to detect 'Server startup' for healthy condition.
 
 ## Usage
 ```
