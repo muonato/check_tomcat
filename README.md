@@ -4,7 +4,6 @@ Nagios monitoring compatible Tomcat server health check
 ## Usage
 ```
 check_tomcat.sh </path/to/log>
-
 ```
 
 ## Nagios monitoring setup
@@ -21,11 +20,13 @@ check_nrpe -H $HOSTADDRESS$ -c check_tomcat -a '/path/to/log'
 ```
 
 ## Examples
-Check certificate expiry date
+Nagios monitoring test
 
 ```
-$ ./check_tomcat.sh /etc/pki/tls/ca/server.pem
-1: CRITICAL - Certificate '/etc/pki/tls/server.pem' expiry '2023-12-31' (in 22 days)
+$ /usr/local/nagios/libexec/check_nrpe -H foobar.server.com -c check_tomcat -a '/opt/tomcat/tomcat9/logs/catalina.out'
+RETURN CODE: 0 (OK)
+OUTPUT:
+ OK - 22-May-2024 11:50:59.272 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [4440] milliseconds
 ```
 
 ## Platform
