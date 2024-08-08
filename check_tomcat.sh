@@ -11,7 +11,7 @@
 #       Nagios nrpe configuration on host :
 #       command[check_tomcat]=sudo /path/to/plugins/check_tomcat.sh $ARG1$
 #
-#       Sudoers drop-in for user 'nagios' /etc/sudoers.d/nagios :
+#       Sudoers drop-in /etc/sudoers.d/nagios required to access Tomcat log :
 #       nagios ALL=NOPASSWD:/usr/local/nagios/libexec/check_tomcat.sh
 #
 #       Opsview monitor configuration :
